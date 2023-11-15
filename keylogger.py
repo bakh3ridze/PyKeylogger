@@ -22,9 +22,12 @@ def send_email(log):
     body = log
     message.attach(MIMEText(body, 'plain'))
 
-    with smtplib.SMTP(smtp_server, smtp_port) as server:
-        server.login(smtp_username, smtp_password)
-        server.send_message(message)
+    try:
+        with smtplib.SMTP(smtp_server, smtp_port) as server:
+            server.login(smtp_username, smtp_password)
+            server.send_message(message)
+    except:
+        print('A')
 
 def send_periodic_emails():
     global log
